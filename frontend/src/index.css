@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-slate-300 antialiased selection:bg-cyan-500/30 selection:text-cyan-50;
+    font-family: 'Inter', sans-serif;
+    background-color: #030712;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(6, 182, 212, 0.08), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(59, 130, 246, 0.08), transparent 25%);
+    background-attachment: fixed;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-[#0b1221]/95 border border-slate-800 shadow-xl;
+  }
+  
+  .glass-card {
+    @apply bg-[#111827] border border-slate-800 hover:border-blue-500/30 hover:bg-[#151e32] transition-colors duration-200;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-800 rounded-full hover:bg-slate-700;
+}
